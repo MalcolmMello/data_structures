@@ -1,0 +1,32 @@
+package linear_search;
+
+public class Main {
+
+	public static void main(String[] args) {
+		/*
+		 * linear search = Iterate through a collection one element at a time
+		 * 				   run time complexity = O(n)
+		 * 				   
+		 * 				   Disadvantages:
+		 * 				   Slow for large data sets
+		 * 				   
+		 *  			   Advantages:
+		 *  			   Fast for searches of small to mediu data sets
+		 *  			   Does not need to sorted
+		 *  			   Useful for data structures that do not have random acess (Linked List)
+		 * */
+		int[] array = {9,6,8,2,3,4,7,5,6,3,1};
+		
+		int index = linearSearch(array, 1);
+	}
+	
+	private static int linearSearch(int[] array, int value) {
+		for(int i = 0; i < array.length; i++) {
+			if(array[i] == value) {
+				return i;
+			}
+		}
+		
+		return -1;
+	}
+}
